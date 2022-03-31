@@ -1,0 +1,199 @@
+.container {
+  .parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .upload-photo {
+      background-image: linear-gradient(#a7a9ac 0%, #eeeeee 100%);
+      width: inherit;
+      height: 220px;
+      position: relative;
+      border-radius: 5px;
+      .photo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #77787b;
+        opacity: 0.6000000238418579;
+        width: 190px;
+        height: 32px;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 5px;
+      }
+      .profile-image {
+        position: absolute;
+        top: 88%;
+        left: 8%;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .play-button {
+        position: absolute;
+        left: 11%;
+        bottom: -24%;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        border-radius: 50%;
+        background-color: white;
+        span {
+          background-color: #1ccdf9;
+          border-radius: 100%;
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          width: fit-content;
+          height: fit-content;
+        }
+      }
+    }
+    .profile {
+      background-color: white;
+      width: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .personal-info {
+        flex: 1 1 33%;
+        span {
+          font-weight: 600;
+          font-size: 23px;
+          font-family: "Roboto Slab", serif;
+          display: block;
+          margin-top: 10px;
+        }
+        .loc {
+          font-weight: 400;
+          font-size: 16px;
+          font-family: "Montserrat", sans-serif;
+          display: block;
+          margin-top: 10px;
+        }
+        .apply-links {
+          font-weight: 400;
+          font-size: 14px;
+          font-family: "Roboto", sans-serif;
+          display: block;
+          margin-top: 10px;
+        }
+
+        .btns {
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+
+          .edit-profile {
+            color: #2b68a0;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: "Roboto", sans-serif;
+            background-color: white;
+            stroke: #2b68a0;
+            max-width: 120px;
+            width: 100%;
+            border-color: 1px solid #2b68a0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          }
+          .add-profile {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 14px;
+            max-width: 120px;
+            width: 100%;
+            font-family: "Roboto", sans-serif;
+            border-color: 1px solid #2b68a0;
+            background-image: linear-gradient(
+              #1ccdf9 0%,
+              #15bced 100%,
+              #0ca7df
+            );
+          }
+        }
+      }
+
+      .info {
+        flex: 1 1 33%;
+        span {
+          font-family: "Roboto Slab", serif;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+      .links {
+        color: #2b68a0;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+
+    .tabs {
+      background-color: white;
+      width: inherit;
+
+      .nav-link {
+        color: #77787b;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .active {
+        color: #2b68a0;
+        font-weight: 500;
+        border-bottom: 3px solid #2b68a0;
+      }
+    }
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  @media (max-width: 1005px) {
+    .profile {
+      flex-wrap: wrap !important;
+    }
+    .play-button {
+      left: 20% !important;
+    }
+    .profile-image {
+      left: 15% !important;
+    }
+    .btns {
+      flex-wrap: wrap !important;
+      .edit-profile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    .profile {
+      flex-wrap: wrap !important;
+    }
+  }
+  @media (max-width: 375px) {
+    .play-button {
+      left: 30% !important;
+    }
+    .profile-image {
+      left: 20% !important;
+    }
+  }
+}
